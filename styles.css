@@ -1,0 +1,347 @@
+:root {
+  --riot-gold: #c89b3c;
+  --riot-blue: #0f2027;
+  --riot-dark: #010a13;
+  --riot-red: #c8aa6e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, var(--riot-dark) 0%, var(--riot-blue) 100%);
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+.navbar {
+  background: rgba(1, 10, 19, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(200, 155, 60, 0.3);
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: var(--riot-gold) !important;
+  font-size: 1.5rem;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.8) !important;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--riot-gold) !important;
+}
+
+.btn-riot {
+  background: linear-gradient(45deg, var(--riot-gold), #f0e6d2);
+  border: none;
+  color: var(--riot-dark);
+  font-weight: bold;
+  padding: 8px 20px;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+
+.btn-riot:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(200, 155, 60, 0.4);
+  color: var(--riot-dark);
+}
+
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  object-fit: cover;
+}
+
+.hero-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(1, 10, 19, 0.6);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-title {
+  font-size: 4rem;
+  font-weight: bold;
+  background: linear-gradient(45deg, var(--riot-gold), #f0e6d2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 2rem;
+}
+
+.auth-container {
+  background: rgba(15, 32, 39, 0.9);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(200, 155, 60, 0.3);
+  border-radius: 15px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.form-control {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(200, 155, 60, 0.3);
+  color: white;
+  border-radius: 8px;
+}
+
+.form-control:focus {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--riot-gold);
+  box-shadow: 0 0 0 0.2rem rgba(200, 155, 60, 0.25);
+  color: white;
+}
+
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.section-title {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 3rem;
+  background: linear-gradient(45deg, var(--riot-gold), #f0e6d2);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.feature-card {
+  background: rgba(15, 32, 39, 0.8);
+  border: 1px solid rgba(200, 155, 60, 0.3);
+  border-radius: 15px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--riot-gold);
+  box-shadow: 0 10px 30px rgba(200, 155, 60, 0.2);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: var(--riot-gold);
+  margin-bottom: 1rem;
+}
+
+.news-card {
+  background: rgba(15, 32, 39, 0.9);
+  border: 1px solid rgba(200, 155, 60, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  margin-bottom: 1.5rem;
+}
+
+.news-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--riot-gold);
+}
+
+.news-image {
+  height: 200px;
+  background: linear-gradient(45deg, var(--riot-blue), var(--riot-dark));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--riot-gold);
+  font-size: 2rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Special styling for Paris news card - full image background */
+.news-card.main-news {
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.news-card.main-news .news-image {
+  height: 400px;
+  position: relative;
+}
+
+.news-card.main-news .news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.news-card.main-news .p-4 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  color: white;
+  padding: 2rem;
+}
+
+.character-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.character-card {
+  background: rgba(15, 32, 39, 0.9);
+  border: 1px solid rgba(200, 155, 60, 0.3);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.character-card:hover {
+  transform: scale(1.05);
+  border-color: var(--riot-gold);
+}
+
+.character-image {
+  height: 300px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.character-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.character-card:hover .character-image img {
+  transform: scale(1.1);
+}
+
+.scene-showcase {
+  height: 400px;
+  background: url("https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=2025&q=80")
+    center / cover;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 2rem;
+}
+
+.scene-showcase::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(1, 10, 19, 0.6);
+  border-radius: 15px;
+}
+
+.scene-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.footer {
+  background: var(--riot-dark);
+  border-top: 1px solid rgba(200, 155, 60, 0.3);
+  padding: 2rem 0;
+  margin-top: 4rem;
+}
+
+/* Modal Styles */
+.modal-content {
+  background: rgba(15, 32, 39, 0.95);
+  border: 1px solid rgba(200, 155, 60, 0.3);
+}
+
+.modal-header.border-bottom {
+  border-color: rgba(200, 155, 60, 0.3) !important;
+}
+
+/* Scene Showcase Background Images */
+.scene-showcase.first-fight {
+  background-image: url('images/first fight.jpg');
+}
+
+.scene-showcase.second-scene {
+  background-image: url('images/second scene.jpg');
+}
+
+.scene-showcase.third-scene {
+  background-image: url('images/third scene.jpg');
+}
+
+/* Character Card Images - No additional styling needed as images will cover the background */
+
+/* News Card Height Variations */
+.news-image.small {
+  height: 120px;
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .character-grid {
+    grid-template-columns: 1fr;
+  }
+}

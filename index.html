@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARCANE OFFICIAL</title>
+    <!-- Updated to use local Bootstrap CSS file instead of CDN -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-gamepad me-2"></i>ARCANE
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">WHO WE ARE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#news">NEWS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#scenes">SCENES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#characters">CHARACTERS</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <i class="fas fa-globe text-white me-3 align-self-center"></i>
+                    <i class="fas fa-search text-white me-3 align-self-center"></i>
+                    <button id="musicToggle" class="btn btn-outline-light me-3">
+                        <i class="fas fa-play me-2" id="musicIcon"></i>Music
+                    </button>
+                    <button class="btn btn-riot" data-bs-toggle="modal" data-bs-target="#authModal">
+                        SIGN IN
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <!-- Background Video -->
+        <video autoplay muted loop class="hero-video">
+            <source src="videos/background video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <div class="container hero-content">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title">WELCOME TO ARCANE</h1>
+                    <p class="lead mb-4">Experience the ultimate gaming universe with our collection of competitive games and immersive worlds.</p>
+                    <button class="btn btn-riot btn-lg me-3" data-bs-toggle="modal" data-bs-target="#authModal">
+                        Get Started
+                    </button>
+                    
+                    <a href="#news" class="btn btn-outline-light btn-lg">Explore Games</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="py-5">
+        <div class="container">
+            <h2 class="section-title">LATEST NEWS</h2>
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="news-card main-news">
+                        <div class="news-image">
+                            <img src="images/paris2.jpg" alt="Champions Paris" class="img-fluid">
+                        </div>
+                        <div class="p-4">
+                            <h3>Everything You Need to Know: Champions Paris</h3>
+                            <p class="text-muted mb-2">
+                                <i class="fas fa-calendar me-2"></i>NEWS
+                            </p>
+                            <p>Get ready for the biggest esports event of the year. Champions Paris brings together the world's best teams for an unforgettable tournament experience.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="news-card">
+                        <div class="news-image small">
+                            <img src="images/season 3.jpg" alt="Season 3 Act 1" class="img-fluid">
+                        </div>
+                        <div class="p-3">
+                            <h5>2025 Season 3 Act 1 Trailer</h5>
+                            <p class="text-muted small">
+                                <i class="fas fa-calendar me-1"></i>NEWS
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-image small">
+                            <img src="images/bot.jpg" alt="Beginning of the End" class="img-fluid">
+                        </div>
+                        <div class="p-3">
+                            <h5>Beginning of the End | Trials of Twilight</h5>
+                            <p class="text-muted small">
+                                <i class="fas fa-calendar me-1"></i>NEWS
+                            </p>
+                        </div>
+                    </div>
+                    <div class="news-card">
+                        <div class="news-image small">
+                            <img src="images/tft.jpg" alt="TFT Pro Circuit" class="img-fluid">
+                        </div>
+                        <div class="p-3">
+                            <h5>TFT Pro Circuit: Everything You Need to Know</h5>
+                            <p class="text-muted small">
+                                <i class="fas fa-calendar me-1"></i>NEWS
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scenes Section -->
+    <section id="scenes" class="py-5">
+        <div class="container">
+            <h2 class="section-title">EPIC SCENES</h2>
+            <div class="row">
+                <div class="col-lg-6 mb-4">
+                    <div class="scene-showcase first-fight">
+                        <div class="scene-content">
+                            <h3>Epic Battle Scenes</h3>
+                            <p>Witness the intensity of legendary confrontations</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-4">
+                    <div class="scene-showcase second-scene">
+                        <div class="scene-content">
+                            <h3>Dramatic Moments</h3>
+                            <p>Experience the most memorable scenes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scene-showcase third-scene">
+                <div class="scene-content">
+                    <h3>Legendary Showdowns</h3>
+                    <p>Epic battles that define the story</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Characters Section -->
+    <section id="characters" class="py-5">
+        <div class="container">
+            <h2 class="section-title">LEGENDARY CHARACTERS</h2>
+            <div class="character-grid">
+                <div class="character-card">
+                    <div class="character-image caitlyn">
+                        <img src="images/caitlyn.jpg" alt="Caitlyn" class="img-fluid">
+                    </div>
+                    <div class="p-3">
+                        <h4>Caitlyn</h4>
+                        <p>The Sheriff of Piltover</p>
+                        <small class="text-muted">League of Legends</small>
+                    </div>
+                </div>
+                <div class="character-card">
+                    <div class="character-image jayce">
+                        <img src="images/jayce.jpg" alt="Jayce" class="img-fluid">
+                    </div>
+                    <div class="p-3">
+                        <h4>Jayce</h4>
+                        <p>The Defender of Tomorrow</p>
+                        <small class="text-muted">League of Legends</small>
+                    </div>
+                </div>
+                <div class="character-card">
+                    <div class="character-image jinx">
+                        <img src="images/Jinx.jpg" alt="Jinx" class="img-fluid">
+                    </div>
+                    <div class="p-3">
+                        <h4>Jinx</h4>
+                        <p>The Loose Cannon</p>
+                        <small class="text-muted">League of Legends</small>
+                    </div>
+                </div>
+                <div class="character-card">
+                    <div class="character-image vi">
+                        <img src="images/Vi.jpg" alt="Vi" class="img-fluid">
+                    </div>
+                    <div class="p-3">
+                        <h4>Vi</h4>
+                        <p>The Piltover Enforcer</p>
+                        <small class="text-muted">League of Legends</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5 class="text-warning">ARCANE</h5>
+                    <p>Creating unforgettable gaming experiences for players worldwide.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <div class="social-links">
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: rgba(200, 155, 60, 0.3);">
+            <div class="text-center">
+                <p>&copy; 2025 Arcane. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="authModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-bottom">
+                    <h5 class="modal-title text-warning">Sign In</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="loginEmail" class="form-label text-white">Email</label>
+                            <input type="email" class="form-control" id="loginEmail" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="loginPassword" class="form-label text-white">Password</label>
+                            <input type="password" class="form-control" id="loginPassword" placeholder="Enter your password">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="rememberMe">
+                            <label class="form-check-label text-white" for="rememberMe">Remember me</label>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-riot">Sign In</button>
+                        </div>
+                    </form>
+                    <div class="text-center mt-3">
+                        <p class="text-white">Don't have an account? <a href="#" class="text-warning" data-bs-toggle="modal" data-bs-target="#registerModal" data-bs-dismiss="modal">Register here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div class="modal fade" id="registerModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-bottom">
+                    <h5 class="modal-title text-warning">Register</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="registerUsername" class="form-label text-white">Username</label>
+                            <input type="text" class="form-control" id="registerUsername" placeholder="Choose a username">
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerEmail" class="form-label text-white">Email</label>
+                            <input type="email" class="form-control" id="registerEmail" placeholder="Enter your email">
+                        </div>
+                        <div class="mb-3">
+                            <label for="registerPassword" class="form-label text-white">Password</label>
+                            <input type="password" class="form-control" id="registerPassword" placeholder="Create a password">
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label text-white">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="agreeTerms">
+                            <label class="form-check-label text-white" for="agreeTerms">I agree to the Terms of Service</label>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-riot">Create Account</button>
+                        </div>
+                    </form>
+                    <div class="text-center mt-3">
+                        <p class="text-white">Already have an account? <a href="#" class="text-warning" data-bs-toggle="modal" data-bs-target="#authModal" data-bs-dismiss="modal">Sign in here</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Site Audio (hidden) -->
+    <audio id="siteAudio" preload="none">
+        <source src="videos/Imagine Dragons x JID - Enemy (Lyrics).mp4" type="audio/mp4">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add active class to navigation items on scroll
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (scrollY >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Music play/pause toggle
+        const musicButton = document.getElementById('musicToggle');
+        const musicIcon = document.getElementById('musicIcon');
+        const siteAudio = document.getElementById('siteAudio');
+
+        if (musicButton && siteAudio && musicIcon) {
+            musicButton.addEventListener('click', async () => {
+                try {
+                    if (siteAudio.paused) {
+                        await siteAudio.play();
+                        musicIcon.classList.remove('fa-play');
+                        musicIcon.classList.add('fa-pause');
+                    } else {
+                        siteAudio.pause();
+                        musicIcon.classList.remove('fa-pause');
+                        musicIcon.classList.add('fa-play');
+                    }
+                } catch (err) {
+                    console.error('Audio playback failed:', err);
+                }
+            });
+
+            // Reset icon when audio ends
+            siteAudio.addEventListener('ended', () => {
+                musicIcon.classList.remove('fa-pause');
+                musicIcon.classList.add('fa-play');
+            });
+        }
+    </script>
+</body>
+</html>
